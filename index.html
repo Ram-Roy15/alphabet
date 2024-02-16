@@ -75,22 +75,22 @@
                     <button class="btn bg-[#894189]">
                         <span class="text-white">Life</span>
                         <img src="./images/heart.svg" alt="">
-                        <span class="text-white">1</span>
+                        <span id="current-life" class="text-white">5</span>
                     </button>
                     <button class="btn bg-[#360490]">
                         <span class="text-white"> Score</span>
                         <img src="./images/doler.svg" alt="">
-                        <span class="text-white">1</span>
+                        <span id="current-score" class="text-white">0</span>
                     </button>
                 </div>
             </div>
 
         </section>
-        <section class="score hidden flex justify-center items-center border h-screen">
+        <section id="play-again" class="score hidden flex justify-center items-center border h-screen">
             <div class="bg-[#FFFFFF33] rounded-md">
                 <div class="space-y-6 p-11 ">
                     <h1 class="text-white text-8xl"><span class="font-bold">Score:</span><span>14</span></h1>
-                    <button class="btn" type="">Play Again</button>
+                    <button onclick="playNow()" class="btn" type="">Play Again</button>
                     <p class="text-white">Practice will make you Pro</p>
                 </div>
             </div>
