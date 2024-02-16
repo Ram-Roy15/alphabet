@@ -26,6 +26,12 @@ function getRandomAlphabets() {
   return alphabet;
 }
 
+function getElementTextById(elementId) {
+  const element = document.getElementById(elementId);
+  const text = element.innerText;
+  return text;
+}
+
 function getTextElementId(elementID) {
   const element = document.getElementById(elementID);
   const elementText = element.innerText;

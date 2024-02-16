@@ -3,6 +3,9 @@ document.addEventListener("keyup", function (e) {
   const randomAlphabet = document
     .getElementById("current-alphabet")
     .innerText.toLowerCase();
+  if (pressedButton === "Escape") {
+    gameOver();
+  }
 
   if (randomAlphabet === pressedButton) {
     continueGame();
@@ -33,10 +36,17 @@ function playNow() {
   hideElementId("home-section");
   hideElementId("play-again");
   showElementId("play-ground");
+
+  setValueId("current-life", 5);
+  setValueId("current-score", 0);
+  const removeBg = getElementTextById("current-alphabet");
+  removeBackgroundColor(removeBg);
   continueGame();
 }
 
 function gameOver() {
   hideElementId("play-ground");
   showElementId("play-again");
+  const lastScore = getTextElementId("current-score");
+  setValueId("last-score", lastScore);
 }
